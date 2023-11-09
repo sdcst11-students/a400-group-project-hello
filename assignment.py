@@ -4,10 +4,21 @@
 
 
 def title():
+    print("===Title Screen===")
+    print("1.Show Instuctions")
+    print("2.Quit")
+    choice=input("Enter your choice:")
+    if choice=="1":
+        instructions()
+    elif choice=="2":
+        print("Goodbye!")
+        quit()
+    else:
+        print("Invalid choice. Please try again.")
     # Will display a title screen
     # input parameters: none needed
     # output parameters: None
-    # Author: Copper
+    # Author: elle
     # Modified:
     # title
     return None
@@ -18,7 +29,7 @@ def instructions():
     # output parameters: None
     # Author:
     # Modified:
-    return None
+    return None 
 
 
 
@@ -28,10 +39,16 @@ def main():
     You will need to include a while loop to keep repeating the commands until
     the user chooses to exit
     """
-    title()
     while True:
+        title()
         # keep giving options to choose menu options until they choose to exit
         pass
 
 if __name__ == "__main__":
     main()
+
+
+
+vol=float(input("enter the volume of the cube:"))
+length=vol**(1/3)
+print("the length of tghe cube is",length)
