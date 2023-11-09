@@ -3,18 +3,19 @@
 # Feel free to rename your variables
 # Authers: Talan Elle
 
+import math, time
+
 def title():
-    print("===Title Screen===")
-    print("1.Show Instuctions")
-    print("2.Quit")
-    choice=input("Enter your choice:")
-    if choice=="1":
+    print("===Title Screen===\n1.Show Instuctions\n2.Quit")
+    choice = input("Enter your choice:")
+    if choice == "1":
         instructions()
-    elif choice=="2":
+    elif choice == "2":
         print("Goodbye!")
         quit()
     else:
         print("Invalid choice. Please try again.")
+        title()
     # Will display a title screen
     # input parameters: none needed
     # output parameters: None
@@ -29,47 +30,113 @@ def instructions():
     # output parameters: None
     # Author: Talan
     # Modified:
-    print("Enter in values for the specified varible when prompted to by the calculater, \nonly enter units(eg. cm) if specified by the calculater")
+    print("Enter in values for the specified varible when prompted to by the calculater.\nOnly enter units when prompted to by the calculater.")
 
 def getRectangleValues():
+    # Author: Talan
     while True:
         l = input("Enter lingth of the rectangle: ")
         try:
-            l = int(l)
-            if -10000 < l < 10000:
+            l = float(l)
+            if 0 < l < 10000:
                 break
         except:
             print("Invaled input please enter in a integer.")
         else:
-            print("Value exceds for digits.")
+            print("Value exceds four positive digits.")
     while True:
         w = input("Enter Width of the rectangle: ")
         try:
-            w = int(w)
-            if -10000 < w < 10000:
+            w = float(w)
+            if 0 < w < 10000:
                 break
         except:
             print("Invaled input please enter in a integer.")
         else:
-            print("Value exceds for digits.")
+            print("Value exceds four positive digits.")
     while True:
         h = input("Enter hight of the rectangle: ")
         try:
-            h = int(h)
-            if -10000 < h < 10000:
+            h = float(h)
+            if 0 < h < 10000:
                 break
         except:
             print("Invaled input please enter in a integer.")
         else:
-            print("Value exceds for digits.")
-    return l, w, h
+            print("Value exceds four positive digits.")
+    m = input("Enter units: ")
+    return l, w, h, m
 
 def RectangleVolume():
-    l, w, h = getRectangleValues()
+    # Author: Talan
+    l, w, h, m = getRectangleValues()
+    try:
+        v = l * w * h
+        print(f"The volume of your rectangl is {round(v,1)}{m}3")
+    except:
+        print("Invalid values.")
+        RectangleVolume()
+
+def RectangleSrfaceArea():
+    # Author: Talan
+    l, w, h, m = getRectangleValues()
+    try:
+        sa = (2 * l * w) + (2 * l * h) + (2 * w * h)
+        print(f"The srface area of your rectangl is {round(sa,1)}{m}2")
+    except:
+        print("Invalid Valuse.")
+        RectangleSrfaceArea()
+
+def getConeValues():
+    # Author: Talan
+    while True:
+        r = input("Enter the radius of the cone: ")
+        try:
+            r = float(r)
+            if 0 < r < 10000:
+                break
+        except:
+            print("Invaled input please enter in a integer.")
+        else:
+            print("Value exceds four positive digits.")
+    while True:
+        h = input("Enter the hight of the cone: ")
+        try:
+            h = float(h)
+            if 0 < h < 10000:
+                break
+        except:
+            print("Invaled input please enter in a integer.")
+        else:
+            print("Value exceds four positive digits.")
     m = input("Enter units: ")
-    v = l * w * h
-    print(f"the volume is {v}{m}3")
-    
+    return r, h, m
+
+def ConeVolume():
+    # Author: Talan
+    r, h, m = getConeValues()
+    try:
+        v = math.pi * (r**2) * (h/3)
+        print(f"The volume of your cone is {round(v,1)}{m}3")
+    except:
+        print("Invalid valuse.")
+        ConeVolume()
+
+def ConeSrfaceArea():
+    # Author: Talan
+    r, h, m = getConeValues()
+    try:
+        sa = math.pi * r * (r + math.sqrt((h**2) + (r**2)))
+        print(f"The srface area of your cone is {round(sa,1)}{m}2")
+    except:
+        print("Invalid values.")
+        ConeSrfaceArea()
+
+def choseCalculater():
+    # Author: Talan
+    print("\n===Chose your Calculater===")
+    print("1.Volume of a rectangler prisum.\n2.Srface Area of a rectangler prisum.\n3.Volume of a cone.\n4.Srface Area of a cone.\n5.side Lingth of a cube.\n6.Volume of a cylinder.\n7.Volume of a rectangler pyramid.\n8.Hypothonus of a right triangle")
+    choose = input("Enter the calculater number: ")
 
 def main():
     """
@@ -79,14 +146,10 @@ def main():
     """
     while True:
         title()
+        time.sleep(1)
+        choseCalculater()
         # keep giving options to choose menu options until they choose to exit
         pass
 
 if __name__ == "__main__":
     main()
-
-
-
-vol=float(input("enter the volume of the cube:"))
-length=vol**(1/3)
-print("the length of tghe cube is",length)
