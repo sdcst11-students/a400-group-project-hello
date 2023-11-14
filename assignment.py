@@ -43,7 +43,7 @@ def getRectangleValues():
         except:
             print("Invalid input please enter in a integer.")
         else:
-            print("Value exceds four positive digits.")
+            print("Value exceeds four positive digits.")
     while True:
         w = input("Enter Width of the rectangle: ")
         try:
@@ -53,7 +53,7 @@ def getRectangleValues():
         except:
             print("Invalid input please enter in a integer.")
         else:
-            print("Value exceds four positive digits.")
+            print("Value exceeds four positive digits.")
     while True:
         h = input("Enter hight of the rectangle: ")
         try:
@@ -63,7 +63,7 @@ def getRectangleValues():
         except:
             print("Invalid input please enter in a integer.")
         else:
-            print("Value exceds four positive digits.")
+            print("Value exceeds four positive digits.")
     m = input("Enter units for your rectangle: ")
     return l, w, h, m
 
@@ -100,7 +100,7 @@ def getConeValues():
         except:
             print("Invaled input please enter in a integer.")
         else:
-            print("Value exceds four positive digits.")
+            print("Value exceeds four positive digits.")
     while True:
         h = input("Enter the hight of the cone: ")
         try:
@@ -110,7 +110,7 @@ def getConeValues():
         except:
             print("Invaled input please enter in a integer.")
         else:
-            print("Value exceds four positive digits.")
+            print("Value exceeds four positive digits.")
     m = input("Enter units for your cone: ")
     return r, h, m
 
@@ -148,7 +148,7 @@ def CubeLength():
         except:
             print("Oops! Invalid input please enter in a integer.")
         else:
-            print("Value exceds four positive digits.")
+            print("Value exceeds four positive digits.")
     length=volume**(1/3)   
     print("The length of the cube is",length)
 
@@ -164,7 +164,7 @@ def CylinderVolume():
         except:
             print("Oops! Invalid input please enter in a integer. ")
         else:
-            print("Value exceds four positive digits.")
+            print("Value exceeds four positive digits.")
     volume=math.pi*(radius**2)*height
     print("The volume of the cylinder is:",volume)
 
@@ -181,7 +181,7 @@ def rectangularpyramid():
         except:
             print("Oops! Invalid input please enter in a integer. ")
         else:
-            print("Value exceds four positive digits.")
+            print("Value exceeds four positive digits.")
     volume=(length*width*height)/3
     print("The volume of rectangular pyramid is:",volume)
 
@@ -197,7 +197,7 @@ def pythagoreanTheorem():
         except:
             print("Invalid input. Please enter a vaild number.")
         else:
-            print("Value exceds four positive digits.")
+            print("Value exceeds four positive digits.")
     hypotenuse=math.sqrt(side_a**2+side_b**2)
     print("The length of the hypotenuse is: ",hypotenuse)
 
