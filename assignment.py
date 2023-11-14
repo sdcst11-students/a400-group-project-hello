@@ -12,7 +12,7 @@ def title():
     # Author: Elle
     # Modified: Talan added lope
     # title
-    print("===Title Screen===\n1.Show Instuctions\n2.Quit")
+    print("=====Title Screen=====\n1.Show Instuctions\n2.Quit")
     while True:
         choice = input("Enter your choice: ")
         if choice == "1":
@@ -64,11 +64,12 @@ def getRectangleValues():
             print("Invalid input please enter in a integer.")
         else:
             print("Value exceds four positive digits.")
-    m = input("Enter units: ")
+    m = input("Enter units for your rectangle: ")
     return l, w, h, m
 
 def RectangleVolume():
     # Author: Talan
+    print("=====Rectangle Volume Caculater=====")
     l, w, h, m = getRectangleValues()
     try:
         v = l * w * h
@@ -79,6 +80,7 @@ def RectangleVolume():
 
 def RectangleSrfaceArea():
     # Author: Talan
+    print("=====Rectangle Srface Area Caculater=====")
     l, w, h, m = getRectangleValues()
     try:
         sa = (2 * l * w) + (2 * l * h) + (2 * w * h)
@@ -109,11 +111,12 @@ def getConeValues():
             print("Invaled input please enter in a integer.")
         else:
             print("Value exceds four positive digits.")
-    m = input("Enter units: ")
+    m = input("Enter units for your cone: ")
     return r, h, m
 
 def ConeVolume():
     # Author: Talan
+    print("=====Cone Volume Caculater=====")
     r, h, m = getConeValues()
     try:
         v = math.pi * (r**2) * (h/3)
@@ -124,6 +127,7 @@ def ConeVolume():
 
 def ConeSrfaceArea():
     # Author: Talan
+    print("=====Cone Srface Area Caculater=====")
     r, h, m = getConeValues()
     try:
         sa = math.pi * r * (r + math.sqrt((h**2) + (r**2)))
@@ -134,6 +138,7 @@ def ConeSrfaceArea():
 
 def CubeLength():
     # Author: Elle
+    print("=====Cube Length Caculater=====")
     while True:
         volume=input("Enter the volume of the cube: ")
         try:           
@@ -149,6 +154,7 @@ def CubeLength():
 
 def CylinderVolume():
     # Author: Elle
+    print("=====Cylinder Volume Caculater=====")
     while True:
         try:
             radius=int(input("Enter the radius of the cylinder: "))
@@ -164,6 +170,7 @@ def CylinderVolume():
 
 def rectangularpyramid():
     # Author: Elle
+    print("=====Rectanglarpyramid Volume Caculater=====")
     while True:
         try:
             length=int(input("Enetr the lenth of the pyramid: "))
@@ -180,6 +187,7 @@ def rectangularpyramid():
 
 def pythagoreanTheorem():
     # Author: Elle
+    print("=====Pythagorean Theorem Caculater=====")
     while True:
         try:
             side_a=int(input("Enter the length of side A: "))
@@ -197,11 +205,12 @@ def pythagoreanTheorem():
 
 def choseCalculater():
     # Author: Talan
-    print("\n===Chose your Calculater===")
-    print("1.Volume of a rectangler prisum.\n2.Srface Area of a rectangler prisum.\n3.Volume of a cone.\n4.Srface Area of a cone.\n5.side Lingth of a cube.\n6.Volume of a cylinder.\n7.Volume of a rectangler pyramid.\n8.Hypothonus of a right triangle useing Pythagures")
+    print("\n=====Chose your Calculater=====")
+    print("1.Volume of a rectangler prisum.\n2.Srface Area of a rectangler prisum.\n3.Volume of a cone.\n4.Srface Area of a cone.\n5.side Lingth of a cube from the Volume.\n6.Volume of a cylinder.\n7.Volume of a rectangler pyramid.\n8.Hypothonus of a right triangle useing Pythagures")
     while True:
         choose = input("Enter the calculater number: ")
         time.sleep(1)
+        print("\n\n")
         if choose == '1':
             RectangleVolume()
             break
@@ -241,6 +250,7 @@ def main():
         time.sleep(2)
         choseCalculater()
         time.sleep(2)
+        print("\n\n")
         # keep giving options to choose menu options until they choose to exit
 
 if __name__ == "__main__":
