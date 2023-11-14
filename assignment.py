@@ -6,23 +6,23 @@
 import math, time
 
 def title():
-    print("===Title Screen===\n1.Show Instuctions\n2.Quit")
-    choice = input("Enter your choice:")
-    if choice == "1":
-        instructions()
-    elif choice == "2":
-        print("Goodbye!")
-        quit()
-    else:
-        print("Invalid choice. Please try again.")
-        title()
     # Will display a title screen
     # input parameters: none needed
     # output parameters: None
     # Author: elle
-    # Modified:
+    # Modified: Talan added lope
     # title
-    return None
+    print("===Title Screen===\n1.Show Instuctions\n2.Quit")
+    while True:
+        choice = input("Enter your choice: ")
+        if choice == "1":
+            instructions()
+            break
+        elif choice == "2":
+            print("Goodbye!")
+            quit()
+        else:
+            print("Invalid choice. Please try again. ")
 
 def instructions():
     # Will display instructions
@@ -132,13 +132,8 @@ def ConeSrfaceArea():
         print("Invalid values.")
         ConeSrfaceArea()
 
-def choseCalculater():
-    # Author: Talan
-    print("\n===Chose your Calculater===")
-    print("1.Volume of a rectangler prisum.\n2.Srface Area of a rectangler prisum.\n3.Volume of a cone.\n4.Srface Area of a cone.\n5.side Lingth of a cube.\n6.Volume of a cylinder.\n7.Volume of a rectangler pyramid.\n8.Hypothonus of a right triangle")
-    choose = input("Enter the calculater number: ")
-
 def CubeLength():
+    # Author: Elle
     while True:
         vol=input("Enter the volume of the cube:")
         try:
@@ -151,6 +146,7 @@ def CubeLength():
     print("the length of the cube is",length)
 
 def CylinderVolume():
+    # Author: Elle
     while True:
         try:
             radius=int(input("Enter the radius of the cylinder:"))
@@ -162,6 +158,7 @@ def CylinderVolume():
             print("oops! Invalid input please enter in a integer.")
     
 def rectangularpyramid():
+    # Author: Elle
     while True:
         try:
             length=int(input("enetr the lenth of the pyramid:"))
@@ -174,7 +171,42 @@ def rectangularpyramid():
             print("oops! Invalid input please enter in a integer.")
 
 def pythagoreanTheorem():
-    
+    # Author: Elle
+    pass
+
+def choseCalculater():
+    # Author: Talan
+    print("\n===Chose your Calculater===")
+    print("1.Volume of a rectangler prisum.\n2.Srface Area of a rectangler prisum.\n3.Volume of a cone.\n4.Srface Area of a cone.\n5.side Lingth of a cube.\n6.Volume of a cylinder.\n7.Volume of a rectangler pyramid.\n8.Hypothonus of a right triangle useing Pythagures")
+    while True:
+        choose = input("Enter the calculater number: ")
+        time.sleep(1)
+        if choose == '1':
+            RectangleVolume()
+            break
+        elif choose == '2':
+            RectangleSrfaceArea()
+            break
+        elif choose == '3':
+            ConeVolume()
+            break
+        elif choose == '4':
+            ConeSrfaceArea()
+            break
+        elif choose == '5':
+            CubeLength()
+            break
+        elif choose == '6':
+            CylinderVolume()
+            break
+        elif choose == '7':
+            rectangularpyramid()
+            break
+        elif choose == '8':
+            pythagoreanTheorem()
+            break
+        else:
+            print("invaled response. Enter the number of calculater.")
 
 def main():
     """
@@ -184,11 +216,10 @@ def main():
     """
     while True:
         title()
-        time.sleep(1)
+        time.sleep(2)
         choseCalculater()
+        time.sleep(2)
         # keep giving options to choose menu options until they choose to exit
-        pass
-
 
 if __name__ == "__main__":
     main()
