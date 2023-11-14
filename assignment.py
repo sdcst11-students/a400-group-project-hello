@@ -78,16 +78,16 @@ def RectangleVolume():
         print("Invalid values.")
         RectangleVolume()
 
-def RectangleSrfaceArea():
+def RectangleSurfaceArea():
     # Author: Talan
-    print("=====Rectangle Srface Area Caculater=====")
+    print("=====Rectangle Surface Area Caculater=====")
     l, w, h, m = getRectangleValues()
     try:
         sa = (2 * l * w) + (2 * l * h) + (2 * w * h)
-        print(f"The srface area of your rectangl is {round(sa,1)}{m}2")
+        print(f"The surface area of your rectangl is {round(sa,1)}{m}2")
     except:
         print("Invalid Valuse.")
-        RectangleSrfaceArea()
+        RectangleSurfaceArea()
 
 def getConeValues():
     # Author: Talan
@@ -125,16 +125,16 @@ def ConeVolume():
         print("Invalid valuse.")
         ConeVolume()
 
-def ConeSrfaceArea():
+def ConeSurfaceArea():
     # Author: Talan
-    print("=====Cone Srface Area Caculater=====")
+    print("=====Cone Surface Area Caculater=====")
     r, h, m = getConeValues()
     try:
         sa = math.pi * r * (r + math.sqrt((h**2) + (r**2)))
-        print(f"The srface area of your cone is {round(sa,1)}{m}2")
+        print(f"The surface area of your cone is {round(sa,1)}{m}2")
     except:
         print("Invalid values.")
-        ConeSrfaceArea()
+        ConeSurfaceArea()
 
 def CubeLength():
     # Author: Elle
@@ -206,7 +206,7 @@ def pythagoreanTheorem():
 def choseCalculater():
     # Author: Talan
     print("\n=====Chose your Calculater=====")
-    print("1.Volume of a rectangler prisum.\n2.Srface Area of a rectangler prisum.\n3.Volume of a cone.\n4.Srface Area of a cone.\n5.side Lingth of a cube from the Volume.\n6.Volume of a cylinder.\n7.Volume of a rectangler pyramid.\n8.Hypothonus of a right triangle useing Pythagures")
+    print("1.Volume of a rectangler prisum.\n2.Surface Area of a rectangler prisum.\n3.Volume of a cone.\n4.Surface Area of a cone.\n5.side Lingth of a cube from the Volume.\n6.Volume of a cylinder.\n7.Volume of a rectangler pyramid.\n8.Hypothonus of a right triangle useing Pythagures")
     while True:
         choose = input("Enter the calculater number: ")
         time.sleep(1)
@@ -215,13 +215,13 @@ def choseCalculater():
             RectangleVolume()
             break
         elif choose == '2':
-            RectangleSrfaceArea()
+            RectangleSurfaceArea()
             break
         elif choose == '3':
             ConeVolume()
             break
         elif choose == '4':
-            ConeSrfaceArea()
+            ConeSurfaceArea()
             break
         elif choose == '5':
             CubeLength()
