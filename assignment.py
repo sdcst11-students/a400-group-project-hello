@@ -9,7 +9,7 @@ def title():
     # Will display a title screen
     # input parameters: none needed
     # output parameters: None
-    # Author: elle
+    # Author: Elle
     # Modified: Talan added lope
     # title
     print("===Title Screen===\n1.Show Instuctions\n2.Quit")
@@ -35,7 +35,7 @@ def instructions():
 def getRectangleValues():
     # Author: Talan
     while True:
-        l = input("Enter lingth of the rectangle: ")
+        l = input("Enter length of the rectangle: ")
         try:
             l = float(l)
             if 0 < l < 10000:
@@ -135,40 +135,48 @@ def ConeSrfaceArea():
 def CubeLength():
     # Author: Elle
     while True:
-        vol=input("Enter the volume of the cube:")
-        try:
-            vol=float(vol)
-            break
+        volume=input("Enter the volume of the cube: ")
+        try:           
+            volume=float(volume)
+            if 0 < volume < 10000:
+                break
         except:
-            print("oops! Invalid input please enter in a integer.")
-        
-    length=vol**(1/3)   
-    print("the length of the cube is",length)
+            print("Oops! Invalid input please enter in a integer.")
+        else:
+            print("Value exceds four positive digits.")
+    length=volume**(1/3)   
+    print("The length of the cube is",length)
 
 def CylinderVolume():
     # Author: Elle
     while True:
         try:
-            radius=int(input("Enter the radius of the cylinder:"))
-            height=int(input("Enter the height of cylinder:"))
-            volume=math.pi*(radius**2)*height
-            print("the volume of the cylinder is:",volume)
-            break
+            radius=int(input("Enter the radius of the cylinder: "))
+            height=int(input("Enter the height of cylinder: "))
+            if (0 < radius < 10000) and (0 < height < 10000):
+                break
         except:
-            print("oops! Invalid input please enter in a integer.")
-    
+            print("Oops! Invalid input please enter in a integer. ")
+        else:
+            print("Value exceds four positive digits.")
+    volume=math.pi*(radius**2)*height
+    print("The volume of the cylinder is:",volume)
+
 def rectangularpyramid():
     # Author: Elle
     while True:
         try:
-            length=int(input("enetr the lenth of the pyramid:"))
-            width=int(input("enetr the width of the pyramid:")) 
-            height=int(input("enetr the height of the pyramid:"))
-            volume=(length*width*height)/3
-            print("the volume of rectangular pyramid is:",volume)
-            break
+            length=int(input("Enetr the lenth of the pyramid: "))
+            width=int(input("Enetr the width of the pyramid: ")) 
+            height=int(input("Enetr the height of the pyramid: "))
+            if (0 < length < 10000) and (0 < width < 10000) and (0 < height < 10000):
+                break
         except:
-            print("oops! Invalid input please enter in a integer.")
+            print("Oops! Invalid input please enter in a integer. ")
+        else:
+            print("Value exceds four positive digits.")
+    volume=(length*width*height)/3
+    print("The volume of rectangular pyramid is:",volume)
 
 def pythagoreanTheorem():
     # Author: Elle
@@ -176,12 +184,15 @@ def pythagoreanTheorem():
         try:
             side_a=int(input("Enter the length of side A: "))
             side_b=int(input("Enter the length of side B: "))
-            hypotenuse=math.sqrt(side_a**2+side_b**2)
-            print("The length of the hypotenuse is: ",hypotenuse)
-            break
+            if(0 < side_a < 10000) and (0 < side_b < 10000):
+                break
         except:
             print("Invalid input. Please enter a vaild number.")
-            print("caluclation compit")
+        else:
+            print("Value exceds four positive digits.")
+    hypotenuse=math.sqrt(side_a**2+side_b**2)
+    print("The length of the hypotenuse is: ",hypotenuse)
+
     
 
 def choseCalculater():
@@ -216,9 +227,7 @@ def choseCalculater():
             pythagoreanTheorem()
             break
         else:
-            print("invaled response. Enter the number of calculater.")
-
-
+            print("invaled response. Enter the number of calculater. ")
 
 
 def main():
