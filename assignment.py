@@ -206,7 +206,7 @@ def pythagoreanTheorem():
 def choseCalculater():
     # Author: Talan
     print("\n=====Chose your Calculater=====")
-    print("1.Volume of a rectangler prisum.\n2.Surface Area of a rectangler prisum.\n3.Volume of a cone.\n4.Surface Area of a cone.\n5.side Lingth of a cube from the Volume.\n6.Volume of a cylinder.\n7.Volume of a rectangler pyramid.\n8.Hypothonus of a right triangle useing Pythagures")
+    print("1.Volume of a rectangler prisum.\n2.Surface Area of a rectangler prisum.\n3.Volume of a cone.\n4.Surface Area of a cone.\n5.side Length of a cube from the Volume.\n6.Volume of a cylinder.\n7.Volume of a rectangler pyramid.\n8.Hypothonus of a right triangle useing Pythagures")
     while True:
         choose = input("Enter the calculater number: ")
         time.sleep(1)
