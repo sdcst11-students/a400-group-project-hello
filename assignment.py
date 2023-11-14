@@ -139,6 +139,7 @@ def choseCalculater():
     choose = input("Enter the calculater number: ")
 
 def CubeLength():
+    # Author: Elle
     while True:
         vol=input("Enter the volume of the cube:")
         try:
@@ -151,6 +152,7 @@ def CubeLength():
     print("the length of the cube is",length)
 
 def CylinderVolume():
+    # Author: Elle
     while True:
         try:
             radius=int(input("Enter the radius of the cylinder:"))
@@ -162,6 +164,7 @@ def CylinderVolume():
             print("oops! Invalid input please enter in a integer.")
     
 def rectangularpyramid():
+    # Author: Elle
     while True:
         try:
             length=int(input("enetr the lenth of the pyramid:"))
@@ -174,7 +177,20 @@ def rectangularpyramid():
             print("oops! Invalid input please enter in a integer.")
 
 def pythagoreanTheorem():
-    
+    # Author: Elle
+    while True:
+        try:
+            side_a=int(input("Enter the length of side A"))
+            side_b=int(input("Enter the length of side B"))
+            hypotenuse=math.sqrt(side_a**2+side_b**2)
+            print("The length of the hypotenuse is:",hypotenuse)
+            break
+        except:
+            print("Invalid input. Please enter a vaild number.")
+            print("caluclation compit")
+
+
+
 
 def main():
     """
