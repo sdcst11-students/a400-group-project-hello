@@ -69,7 +69,7 @@ def getRectangleValues():
 
 def RectangleVolume():
     # Author: Talan
-    print("=====Rectangle Volume Caculater=====")
+    print("=====Rectangle Volume Calculater=====")
     l, w, h, m = getRectangleValues()
     try:
         v = l * w * h
@@ -80,7 +80,7 @@ def RectangleVolume():
 
 def RectangleSurfaceArea():
     # Author: Talan
-    print("=====Rectangle Surface Area Caculater=====")
+    print("=====Rectangle Surface Area Calculater=====")
     l, w, h, m = getRectangleValues()
     try:
         sa = (2 * l * w) + (2 * l * h) + (2 * w * h)
@@ -116,7 +116,7 @@ def getConeValues():
 
 def ConeVolume():
     # Author: Talan
-    print("=====Cone Volume Caculater=====")
+    print("=====Cone Volume Calculater=====")
     r, h, m = getConeValues()
     try:
         v = math.pi * (r**2) * (h/3)
@@ -127,7 +127,7 @@ def ConeVolume():
 
 def ConeSurfaceArea():
     # Author: Talan
-    print("=====Cone Surface Area Caculater=====")
+    print("=====Cone Surface Area Calculater=====")
     r, h, m = getConeValues()
     try:
         sa = math.pi * r * (r + math.sqrt((h**2) + (r**2)))
@@ -138,7 +138,7 @@ def ConeSurfaceArea():
 
 def CubeLength():
     # Author: Elle
-    print("=====Cube Length Caculater=====")
+    print("=====Cube Length Calculater=====")
     while True:
         volume=input("Enter the volume of the cube: ")
         try:           
@@ -154,7 +154,7 @@ def CubeLength():
 
 def CylinderVolume():
     # Author: Elle
-    print("=====Cylinder Volume Caculater=====")
+    print("=====Cylinder Volume Calculater=====")
     while True:
         try:
             radius=int(input("Enter the radius of the cylinder: "))
@@ -170,12 +170,12 @@ def CylinderVolume():
 
 def rectangularpyramid():
     # Author: Elle
-    print("=====Rectanglarpyramid Volume Caculater=====")
+    print("=====Rectanglarpyramid Volume Calculater=====")
     while True:
         try:
-            length=int(input("Enetr the lenth of the pyramid: "))
-            width=int(input("Enetr the width of the pyramid: ")) 
-            height=int(input("Enetr the height of the pyramid: "))
+            length=int(input("Enter the lenth of the pyramid: "))
+            width=int(input("Enter the width of the pyramid: ")) 
+            height=int(input("Enter the height of the pyramid: "))
             if (0 < length < 10000) and (0 < width < 10000) and (0 < height < 10000):
                 break
         except:
@@ -187,7 +187,7 @@ def rectangularpyramid():
 
 def pythagoreanTheorem():
     # Author: Elle
-    print("=====Pythagorean Theorem Caculater=====")
+    print("=====Pythagorean Theorem Calculater=====")
     while True:
         try:
             side_a=int(input("Enter the length of side A: "))
@@ -204,7 +204,7 @@ def pythagoreanTheorem():
 def choseCalculater():
     # Author: Talan
     print("\n=====Chose your Calculater=====")
-    print("1.Volume of a rectangler prisum.\n2.Surface Area of a rectangler prisum.\n3.Volume of a cone.\n4.Surface Area of a cone.\n5.side Lingth of a cube from the Volume.\n6.Volume of a cylinder.\n7.Volume of a rectangler pyramid.\n8.Hypothonus of a right triangle useing Pythagures")
+    print("1.Volume of a rectangler prisum.\n2.Surface Area of a rectangler prism.\n3.Volume of a cone.\n4.Surface Area of a cone.\n5.side Lingth of a cube from the Volume.\n6.Volume of a cylinder.\n7.Volume of a rectangler pyramid.\n8.Hypotenuse of a right triangle useing Pythagures")
     while True:
         choose = input("Enter the calculater number: ")
         time.sleep(1)
