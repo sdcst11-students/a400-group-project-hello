@@ -172,7 +172,17 @@ def rectangularpyramid():
 
 def pythagoreanTheorem():
     # Author: Elle
-    pass
+    while True:
+        try:
+            side_a=int(input("Enter the length of side A: "))
+            side_b=int(input("Enter the length of side B: "))
+            hypotenuse=math.sqrt(side_a**2+side_b**2)
+            print("The length of the hypotenuse is: ",hypotenuse)
+            break
+        except:
+            print("Invalid input. Please enter a vaild number.")
+            print("caluclation compit")
+    
 
 def choseCalculater():
     # Author: Talan
@@ -207,6 +217,9 @@ def choseCalculater():
             break
         else:
             print("invaled response. Enter the number of calculater.")
+
+
+
 
 def main():
     """
