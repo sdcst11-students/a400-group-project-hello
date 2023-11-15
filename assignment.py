@@ -45,7 +45,7 @@ def getRectangleValues():
         else:
             print("Value exceeds four positive digits.")
     while True:
-        w = input("Enter Width of the rectangle: ")
+        w = input("Enter width of the rectangle: ")
         try:
             w = float(w)
             if 0 < w < 10000:
@@ -73,7 +73,7 @@ def RectangleVolume():
     l, w, h, m = getRectangleValues()
     try:
         v = l * w * h
-        print(f"The volume of your rectangl is {round(v,1)}{m}3")
+        print(f"The volume of your rectangle is {round(v,1)}{m}3")
     except:
         print("Invalid values.")
         RectangleVolume()
@@ -84,7 +84,7 @@ def RectangleSurfaceArea():
     l, w, h, m = getRectangleValues()
     try:
         sa = (2 * l * w) + (2 * l * h) + (2 * w * h)
-        print(f"The surface area of your rectangl is {round(sa,1)}{m}2")
+        print(f"The surface area of your rectangle is {round(sa,1)}{m}2")
     except:
         print("Invalid Valuse.")
         RectangleSurfaceArea()
@@ -98,7 +98,7 @@ def getConeValues():
             if 0 < r < 10000:
                 break
         except:
-            print("Invaled input please enter in a integer.")
+            print("Invalid input please enter in a integer.")
         else:
             print("Value exceeds four positive digits.")
     while True:
@@ -108,7 +108,7 @@ def getConeValues():
             if 0 < h < 10000:
                 break
         except:
-            print("Invaled input please enter in a integer.")
+            print("Invalid input please enter in a integer.")
         else:
             print("Value exceeds four positive digits.")
     m = input("Enter units for your cone: ")
@@ -234,7 +234,7 @@ def choseCalculater():
             pythagoreanTheorem()
             break
         else:
-            print("invaled response. Enter the number of calculater. ")
+            print("Invalid response. Enter the number of calculater. ")
 
 def main():
     """
